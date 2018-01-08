@@ -2,6 +2,7 @@ import csv
 import random
 import sys
 from random import shuffle
+totalWinners = 42
 winlist = []
 with open(sys.argv[1]) as csvfile:
     reader = csv.DictReader(csvfile)
@@ -10,22 +11,26 @@ with open(sys.argv[1]) as csvfile:
         if row['What username do you go by online?'] == '-':
             username = row['Ticket First Name']
         winlist.append(row['Number'] + " " +  username)
-[print(thing) for thing in random.sample(winlist, len(winlist))[0:30]]
-slide = open('slide.html','w')
+[print(thing) for thing in random.sample(winlist, len(winlist))[0:totalWinners]]
+slide = open('winners.html','w')
 slide.write("""
- <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>SMK Winter Meetup 2018 Winners!</title>
-    <h1>And the winners are...</h1>
-  </head>
-  <body>
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>SMKmeetup Giveaway Winners!</title>
+<link rel="stylesheet" href="raffle-style.css">
+</head>
+<body>
+<h2>SMKmeetup Giveaway Winners</h2>
+<ul class="multi-12">
 """)
-for i in random.sample(winlist, len(winlist))[0:30]:
-    slide.write("<p>"+i+"</p>\n")
+for i in random.sample(winlist, len(winlist))[0:totalWinners]:
+    winner = i[:12] + (i[12:] and '...')
+    slide.write("<li>"+winner+"</li>\n")
 slide.write("""
-  </body>
+</ul>
+</body>
 </html>
 """)
 slide.close()

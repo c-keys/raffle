@@ -25,7 +25,7 @@ slide.write("""
 <ul class="multi-12">
 """)
 for i in random.sample(winlist, len(winlist))[0:48]:
-    winner = i[:18] + (i[18:] and '...')
+    winner = i[:12] + (i[12:] and '...')
     slide.write("<li>"+winner+"</li>\n")
 slide.write("""
 </ul>

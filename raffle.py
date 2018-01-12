@@ -2,7 +2,7 @@ import csv
 import random
 import sys
 from random import shuffle
-totalWinners = 42
+totalWinners = 48
 winlist = []
 with open(sys.argv[1]) as csvfile:
     reader = csv.DictReader(csvfile)

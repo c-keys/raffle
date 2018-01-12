@@ -19,7 +19,7 @@ slide.write("""
 <head>
 <meta charset=utf-8>
 <title>SMKmeetup Giveaway Winners!</title>
-<link rel="stylesheet" href="raffle-style.css">
+<link rel="stylesheet" href="raffle-style-slow.css">
 </head>
 <body>
 <h2>SMKmeetup Giveaway Winners</h2>

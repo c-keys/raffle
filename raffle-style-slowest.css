@@ -1,0 +1,276 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+body {
+  background: #1d1f20;
+  color: #eee;
+  font-family: 'Lato', sans-serif;
+  font-size: 2em;
+}
+
+.multi-12 {
+  padding: 0;
+  height: 24em;
+}
+.multi-12, .multi-12 > li, .multi-12 > li > a {
+  line-height: 1;
+}
+.multi-12 > li {
+  line-height: 2em;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  text-transform: uppercase;
+  animation: fadeIn 0.5s linear;
+  animation-fill-mode: both;
+  list-style-type: none;
+}
+.multi-12 > li:nth-child(-n+120) {
+  margin-left: 225%;
+}
+.multi-12 > li:nth-child(-n+108) {
+  margin-left: 200%;
+}
+.multi-12 > li:nth-child(-n+96) {
+  margin-left: 175%;
+}
+.multi-12 > li:nth-child(-n+84) {
+  margin-left: 150%;
+}
+.multi-12 > li:nth-child(-n+72) {
+  margin-left: 125%;
+}
+.multi-12 > li:nth-child(-n+60) {
+  margin-left: 100%;
+}
+.multi-12 > li:nth-child(-n+48) {
+  margin-left: 75%;
+}
+.multi-12 > li:nth-child(-n+36) {
+  margin-left: 50%;
+}
+.multi-12 > li:nth-child(-n+24) {
+  margin-left: 25%;
+}
+.multi-12 > li:nth-child(-n+12) {
+  margin-left: 0%;
+}
+.multi-12 > li:nth-child(12n+13) {
+  margin-top: -24em;
+}
+.multi-12 li {
+  text-align: center;
+  position: relative;
+}
+.multi-12 li:before {
+  content: "";
+  position: absolute;
+  border-left: 1px solid #555;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+li:nth-child(1) {
+  animation-delay: 5s;
+}
+
+li:nth-child(2) {
+  animation-delay: 10s;
+}
+
+li:nth-child(3) {
+  animation-delay: 15s;
+}
+
+li:nth-child(4) {
+  animation-delay: 20s;
+}
+
+li:nth-child(5) {
+  animation-delay: 25s;
+}
+
+li:nth-child(6) {
+  animation-delay: 30s;
+}
+
+li:nth-child(7) {
+  animation-delay: 35s;
+}
+
+li:nth-child(8) {
+  animation-delay: 40s;
+}
+
+li:nth-child(9) {
+  animation-delay: 45s;
+}
+
+li:nth-child(10) {
+  animation-delay: 50s;
+}
+
+li:nth-child(11) {
+  animation-delay: 55s;
+}
+
+li:nth-child(12) {
+  animation-delay: 60s;
+}
+
+li:nth-child(13) {
+  animation-delay: 65s;
+}
+
+li:nth-child(14) {
+  animation-delay: 70s;
+}
+
+li:nth-child(15) {
+  animation-delay: 75s;
+}
+
+li:nth-child(16) {
+  animation-delay: 80s;
+}
+
+li:nth-child(17) {
+  animation-delay: 85s;
+}
+
+li:nth-child(18) {
+  animation-delay: 90s;
+}
+
+li:nth-child(19) {
+  animation-delay: 95s;
+}
+
+li:nth-child(20) {
+  animation-delay: 100s;
+}
+
+li:nth-child(21) {
+  animation-delay: 105s;
+}
+
+li:nth-child(22) {
+  animation-delay: 110s;
+}
+
+li:nth-child(23) {
+  animation-delay: 115s;
+}
+
+li:nth-child(24) {
+  animation-delay: 120s;
+}
+
+li:nth-child(25) {
+  animation-delay: 125s;
+}
+
+li:nth-child(26) {
+  animation-delay: 130s;
+}
+
+li:nth-child(27) {
+  animation-delay: 135s;
+}
+
+li:nth-child(28) {
+  animation-delay: 140s;
+}
+
+li:nth-child(29) {
+  animation-delay: 145s;
+}
+
+li:nth-child(30) {
+  animation-delay: 150s;
+}
+
+li:nth-child(31) {
+  animation-delay: 155s;
+}
+
+li:nth-child(32) {
+  animation-delay: 160s;
+}
+
+li:nth-child(33) {
+  animation-delay: 165s;
+}
+
+li:nth-child(34) {
+  animation-delay: 170s;
+}
+
+li:nth-child(35) {
+  animation-delay: 175s;
+}
+
+li:nth-child(36) {
+  animation-delay: 180s;
+}
+
+li:nth-child(37) {
+  animation-delay: 185s;
+}
+
+li:nth-child(38) {
+  animation-delay: 190s;
+}
+
+li:nth-child(39) {
+  animation-delay: 195s;
+}
+
+li:nth-child(40) {
+  animation-delay: 200s;
+}
+
+li:nth-child(41) {
+  animation-delay: 205s;
+}
+
+li:nth-child(42) {
+  animation-delay: 210s;
+}
+
+li:nth-child(43) {
+  animation-delay: 215s;
+}
+
+li:nth-child(44) {
+  animation-delay: 220s;
+}
+
+li:nth-child(45) {
+  animation-delay: 225s;
+}
+
+li:nth-child(46) {
+  animation-delay: 230s;
+}
+
+li:nth-child(47) {
+  animation-delay: 235s;
+}
+
+li:nth-child(48) {
+  animation-delay: 240s;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    top: 100px;
+  }
+  75% {
+    opacity: 0.5;
+    top: 0px;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -19,10 +19,10 @@ slide.write("""
 <head>
 <meta charset=utf-8>
 <title>SMKmeetup Giveaway Winners!</title>
-<link rel="stylesheet" href="raffle-style-slow.css">
+<link rel="stylesheet" href="raffle-style-slowest.css">
 </head>
 <body>
-<h2>SMKmeetup Giveaway Winners</h2>
+<h2>SMKmeetup Giveaway Winners...</h2>
 <ul class="multi-12">
 """)
 for i in random.sample(winlist, len(winlist))[0:totalWinners]:

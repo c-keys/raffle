@@ -1,10 +1,14 @@
 import csv
 import random
-import sys
+import argparse
 from random import shuffle
-totalWinners = 48
+parser = argparse.ArgumentParser()
+parser.add_argument("csv",help = "the location of the csv input")
+args = parser.parse_args()
 winlist = []
-with open(sys.argv[1]) as csvfile:
+csvrow = open(args.csv)
+totalWinners = sum(1 for row in csvrow)
+with open(args.csv) as csvfile:
     reader = csv.DictReader(csvfile)
     for row in reader:
         username =  row['What username do you go by online?']

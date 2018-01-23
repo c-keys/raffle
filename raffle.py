@@ -4,10 +4,11 @@ import argparse
 from random import shuffle
 parser = argparse.ArgumentParser()
 parser.add_argument("csv",help = "the location of the csv input")
+parser.add_argument("totalWinners", type=int, help="total number of selected winners")
 args = parser.parse_args()
 winlist = []
 csvrow = open(args.csv)
-totalWinners = sum(1 for row in csvrow)
+totalWinners = args.totalWinners
 with open(args.csv) as csvfile:
     reader = csv.DictReader(csvfile)
     for row in reader:

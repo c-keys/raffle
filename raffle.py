@@ -1,12 +1,7 @@
 import csv
 import random
 import argparse
-parser = argparse.ArgumentParser()
-parser.add_argument("csv", help="the location of the csv input")
-parser.add_argument("totalWinners", type=int, help="total number of selected winners")
-args = parser.parse_args()
-totalWinners = args.totalWinners
-def asfhkjljafsk:
+def asfhkjljafsk():
     winlist = []
     with open(args.csv) as csvfile:
         reader = csv.DictReader(csvfile)
@@ -15,8 +10,7 @@ def asfhkjljafsk:
             if row['What username do you go by online?'] == '-':
                 username = row['Ticket First Name']
             winlist.append(row['Number'] + " " +  username)
-
-def htmlwriter:
+def htmlwriter(winlist):
     slide = open('winners.html', 'w')
     slide.write("""
     <!doctype html>
@@ -39,8 +33,7 @@ def htmlwriter:
     </html>
     """)
     slide.close()
-
-def main:
+def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("csv", help="the location of the csv input")
     parser.add_argument("totalWinners", type=int, help="total number of selected winners")

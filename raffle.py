@@ -27,11 +27,14 @@ def gen_list(argcsv):
     winlist = []
     with open(argcsv) as csvfile:
         reader = csv.DictReader(csvfile)
+        print(reader)
         for row in reader:
             username = row['What username do you go by online?']
             if row['What username do you go by online?'] == '-':
-                username = row['Ticket First Name']
-            winlist.append(row['Number'] + " " +  username)
+                username = row['Ticket First Name'] + " " + row['Ticket Last Name'][0:1] + "."
+            num = row['Number']
+            winlist[num] = username
+            winlist.append({'id': row['Number', 'name': row['Ticket First Name'] + " " + row['Ticket Last Name'][0:1], 'uname': row['What username do you go by online?']})
     return winlist
 def html_writer(winlist, total_winners):
     """
@@ -45,6 +48,12 @@ def html_writer(winlist, total_winners):
         None. Writes an html file.
 
     """
+    winreader = open('winners.csv', 'r')
+    for x in winlist:
+        for y in winreader:
+            if x in y:
+                del x[y]
+    winreader.close()
     slide = open('winners.html', 'w')
     slide.write("""
     <!doctype html>
@@ -58,9 +67,13 @@ def html_writer(winlist, total_winners):
     <h2>SMKmeetup Giveaway Winners</h2>
     <ul class="multi-12">
     """)
-    for i in random.sample(winlist, len(winlist))[0:total_winners]:
-        winner = i[:12] + (i[12:] and '...')
+    for i in random.sample(list(winlist), total_winners):
+        winwriter = open('winners.csv', 'a')
+        winner = i + " " + winlist[i] + " " 
         slide.write("<li>"+winner+"</li>\n")
+        winwriter.write(i + "," + winlist[i] + "\n")
+        print(winner)
+        winwriter.close()
     slide.write("""
     </ul>
     </body>
@@ -81,6 +94,7 @@ def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("csv", help="the location of the csv input")
     parser.add_argument("total_winners", type=int, help="total number of selected winners")
+    parser.add_argument("rerun", type=bool, help="boolean value to determine whether or not the script will be rerun")
     return parser.parse_args()
 def main():
     """

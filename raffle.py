@@ -90,10 +90,10 @@ def parse_args():
 
     """
     parser = argparse.ArgumentParser()
-    parser.add_argument('-i', "--csvin", help="the location of the csv input")
-    parser.add_argument('-w', "--total_winners", type=int, help="total number of selected winners")
-    parser.add_argument('-o', "--csvout",  help="csv output file")
-    parser.add_argument('-p', "--htmlout", help="html output file")
+    parser.add_argument('-i', "--csvin", help="the location of the csv input",required=True)
+    parser.add_argument('-w', "--total_winners", type=int, help="total number of selected winners",required=True)
+    parser.add_argument('-o', "--csvout",  help="csv output file",required=True)
+    parser.add_argument('-p', "--htmlout", help="html output file",required=True)
     return parser.parse_args()
 
 def main():

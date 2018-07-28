@@ -61,7 +61,7 @@ def html_writer(inputlist, total_winners, csvout, htmlout):
             '<link rel="stylesheet" href="raffle-style.css">\n'
             '</head>\n'
             '<body>\n'
-            '<h2>SMKmeetunp Giveaway Winners</h2>\n'
+            '<h2>SMKmeetup Giveaway Winners</h2>\n'
             '<ul class="multi-12">\n'
         )
         for winner in random.sample(inputlist, total_winners):

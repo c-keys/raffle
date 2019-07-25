@@ -37,7 +37,7 @@ def gen_list(argcsv):
                 username = "{} {}.".format(row['Ticket First Name'], row['Ticket Last Name'][0:1])
             num = row['Number']
             if row['Ticket'] not in banned_tix:
-                inputlist.append({'number':num,'username':username})
+                inputlist.append({'number':num, 'username':username})
     return inputlist
 def html_writer(inputlist, total_winners, csvout, htmlout):
     """
@@ -73,8 +73,12 @@ def html_writer(inputlist, total_winners, csvout, htmlout):
             '</html>\n'
         )
         with open(csvout, 'w') as csvfile:
-            writer = csv.DictWriter(csvfile, fieldnames=['number','username'])
-            writer.writerow({'number': 'Number', 'username': 'What username do you go by online?'})
+            writer = csv.DictWriter(csvfile, fieldnames=['number', 'username', 'ticket'])
+            writer.writerow({
+                'number': 'Number',
+                'username': 'What username do you go by online?',
+                'ticket': 'Ticket'
+                })
             for loser in inputlist:
                 writer.writerow({'number': loser['number'], 'username': loser['username']})
 
@@ -90,10 +94,11 @@ def parse_args():
 
     """
     parser = argparse.ArgumentParser()
-    parser.add_argument('-i', "--csvin", help="the location of the csv input",required=True)
-    parser.add_argument('-w', "--total_winners", type=int, help="total number of selected winners",required=True)
-    parser.add_argument('-o', "--csvout",  help="csv output file",required=True)
-    parser.add_argument('-p', "--htmlout", help="html output file",required=True)
+    parser.add_argument('-i', "--csvin", help="the location of the csv input", required=True)
+    parser.add_argument('-w', "--total_winners", type=int,
+                        help="total number of selected winners", required=True)
+    parser.add_argument('-o', "--csvout", help="csv output file", required=True)
+    parser.add_argument('-p', "--htmlout", help="html output file", required=True)
     return parser.parse_args()
 
 def main():
